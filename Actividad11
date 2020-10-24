@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+//Clase principal Actividad11
+public class Actividad11 {
+
+	Scanner sc = new Scanner(System.in);
+	
+	//Constructor
+	public Actividad11(){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Actividad11 obj = new Actividad11();
+		obj.Menu();
+
+	}
+
+	public void Menu() {
+				
+		boolean verdadero = true;
+		
+		while(verdadero == true) {
+			
+			System.out.println("Seleccione la figura que desea: \n 1 - Circulo \n 2 - Triangulo \n 3 - Cuadrado \n 0 - Salir");
+			int x = sc.nextInt();
+		
+			switch (x) {
+			
+				case 1:
+					Circle obj1 = new Circle();
+					System.out.println("Circulo ");
+					System.out.println("Seleccione: \n 1 - Para obtener Area \n 2 - Para obtener Perimetro");
+					int o = sc.nextInt();
+					if(o == 1) {
+						obj1.getArea();
+					}else {
+						obj1.getPerimeter();
+					}
+					verdadero = true;
+					break;
+				
+				case 2:
+					Triangle obj2 = new Triangle();
+					System.out.println("Triangulo ");
+					System.out.println("Seleccione: \n 1 - Para obtener Area \n 2 - Para obtener Perimetro");
+					int a = sc.nextInt();
+					if(a == 1) {
+						obj2.getArea();
+					}else {
+						obj2.getPerimeter();
+					}
+					verdadero = true;
+					break;
+				
+				case 3:
+					Square obj3 = new Square();
+					System.out.println("Cuadrado ");
+					System.out.println("Seleccione: \n 1 - Para obtener Area \n 2 - Para obtener Perimetro");
+					int b = sc.nextInt();
+					if(b == 1) {
+						obj3.getArea();
+					}else {
+						obj3.getPerimeter();
+					}
+					verdadero = true;
+					break;
+					
+				case 0:
+					System.out.println("Salir ");
+					verdadero = false;
+					break;
+					
+				default:
+					System.out.println("Opción no válida, intente de nuevo. ");
+					verdadero = true;
+			}
+			
+		}
+		
+	}
+	
+}

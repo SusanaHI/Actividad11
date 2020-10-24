@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+//Clase Triangle
+public class Triangle {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	//Constructor
+	public Triangle() {
+		
+	}
+	
+	public void getArea() {
+	
+		System.out.println("Introduzca la base del triangulo: ");
+		double base = sc.nextInt();
+		
+		System.out.println("Introduzca la altura del triangulo: ");
+		double altura = sc.nextInt();
+
+		double area = ((base * altura) / 2);
+		
+		System.out.println("El area del triangulo es: " + area);
+		
+	}
+	
+	public void getPerimeter() {
+		
+		System.out.println("Introduzca la longitud de un lado del triangulo: ");
+		double lado = sc.nextInt();
+		
+		double perimetro = (lado * 3);
+		
+		System.out.println("El perimetro del triangulo es: " + perimetro);
+		
+	}
+		
+}

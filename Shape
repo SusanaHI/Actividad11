@@ -1,0 +1,8 @@
+//Interfaz Shape
+public interface Shape {
+
+	public void getArea();
+	
+	public void getPerimeter();
+	
+}

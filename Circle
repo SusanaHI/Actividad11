@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+//Clase Circle
+public class Circle implements Shape {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	//Constructor
+	public Circle() {
+		
+	}
+	
+	public void getArea() {
+		
+		System.out.println("Introduzca el radio de la circunferencia: ");
+		double radio = sc.nextInt();
+
+		double area = Math.PI * Math.pow(radio, 2);
+		
+		System.out.println("El area del circulo es: " + area);
+		
+	}
+	
+	public void getPerimeter() {
+		
+		System.out.println("Introduzca el diametro de la circunferencia: ");
+		double diametro = sc.nextInt();
+		
+		double perimetro = Math.PI * diametro;
+		
+		System.out.println("El perimetro del circulo es: " + perimetro);
+		
+	}
+	
+}
